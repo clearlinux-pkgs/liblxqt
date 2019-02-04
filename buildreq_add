@@ -1,0 +1,7 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+buildreq-kde
+polkit-dev
+libqtxdg-dev
+lxqt-build-tools
+polkit-qt-dev
