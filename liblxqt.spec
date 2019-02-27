@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x42C9C8D3AF5EA5E3 (agaida@siduction.org)
 #
 Name     : liblxqt
-Version  : 0.14.0
-Release  : 1
-URL      : https://downloads.lxqt.org/downloads/liblxqt/0.14.0/liblxqt-0.14.0.tar.xz
-Source0  : https://downloads.lxqt.org/downloads/liblxqt/0.14.0/liblxqt-0.14.0.tar.xz
-Source99 : https://downloads.lxqt.org/downloads/liblxqt/0.14.0/liblxqt-0.14.0.tar.xz.asc
+Version  : 0.14.1
+Release  : 2
+URL      : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz
+Source0  : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz
+Source99 : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz.asc
 Summary  : Common base library for LXQt components.
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -57,6 +57,7 @@ Requires: liblxqt-lib = %{version}-%{release}
 Requires: liblxqt-bin = %{version}-%{release}
 Requires: liblxqt-data = %{version}-%{release}
 Provides: liblxqt-devel = %{version}-%{release}
+Requires: liblxqt = %{version}-%{release}
 
 %description dev
 dev components for the liblxqt package.
@@ -81,14 +82,14 @@ license components for the liblxqt package.
 
 
 %prep
-%setup -q -n liblxqt-0.14.0
+%setup -q -n liblxqt-0.14.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549303514
+export SOURCE_DATE_EPOCH=1551227431
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -96,7 +97,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1549303514
+export SOURCE_DATE_EPOCH=1551227431
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/liblxqt
 cp COPYING %{buildroot}/usr/share/package-licenses/liblxqt/COPYING
@@ -122,6 +123,7 @@ popd
 /usr/share/lxqt/translations/liblxqt/liblxqt_da.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_de.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_el.qm
+/usr/share/lxqt/translations/liblxqt/liblxqt_en_GB.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_eo.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_es.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_es_VE.qm
@@ -202,7 +204,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/liblxqt.so.0
-/usr/lib64/liblxqt.so.0.14.0
+/usr/lib64/liblxqt.so.0.14.1
 
 %files license
 %defattr(0644,root,root,0755)
