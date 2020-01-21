@@ -6,11 +6,11 @@
 #
 Name     : liblxqt
 Version  : 0.14.1
-Release  : 2
+Release  : 3
 URL      : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz
 Source0  : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz
-Source99 : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz.asc
-Summary  : Common base library for LXQt components.
+Source1  : https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz.asc
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: liblxqt-bin = %{version}-%{release}
@@ -25,6 +25,7 @@ BuildRequires : lxqt-build-tools
 BuildRequires : polkit-dev
 BuildRequires : polkit-qt-dev
 BuildRequires : qtbase-dev mesa-dev
+Patch1: 0001-Fix-building-with-Qt-5.14.patch
 
 %description
 # liblxqt
@@ -83,24 +84,31 @@ license components for the liblxqt package.
 
 %prep
 %setup -q -n liblxqt-0.14.1
+cd %{_builddir}/liblxqt-0.14.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1551227431
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1579630439
 mkdir -p clr-build
 pushd clr-build
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %cmake ..
-make  %{?_smp_mflags}
+make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1551227431
+export SOURCE_DATE_EPOCH=1579630439
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/liblxqt
-cp COPYING %{buildroot}/usr/share/package-licenses/liblxqt/COPYING
+cp %{_builddir}/liblxqt-0.14.1/COPYING %{buildroot}/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -208,4 +216,4 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/liblxqt/COPYING
+/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
