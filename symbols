@@ -89,6 +89,8 @@ liblxqt.so.0:_ZN4LXQt12Notification11qt_metacastEPKc
 liblxqt.so.0:_ZN4LXQt12Notification14setUrgencyHintENS0_7UrgencyE
 liblxqt.so.0:_ZN4LXQt12Notification15actionActivatedEi
 liblxqt.so.0:_ZN4LXQt12Notification15getCapabilitiesEv
+liblxqt.so.0:_ZN4LXQt12Notification15queryServerInfoEv
+liblxqt.so.0:_ZN4LXQt12Notification15serverInfoReadyEv
 liblxqt.so.0:_ZN4LXQt12Notification18notificationClosedENS0_11CloseReasonE
 liblxqt.so.0:_ZN4LXQt12Notification5closeEv
 liblxqt.so.0:_ZN4LXQt12Notification6notifyERK7QStringS3_S3_
@@ -282,6 +284,7 @@ liblxqt.so.0:_ZNK4LXQt16PageSelectWidget10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt16PageSelectWidget12maxTextWidthEv
 liblxqt.so.0:_ZNK4LXQt16PageSelectWidget15minimumSizeHintEv
 liblxqt.so.0:_ZNK4LXQt16PageSelectWidget16viewportSizeHintEv
+liblxqt.so.0:_ZNK4LXQt16PageSelectWidget8sizeHintEv
 liblxqt.so.0:_ZNK4LXQt17SingleApplication10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt17SingleApplication16activationWindowEv
 liblxqt.so.0:_ZNK4LXQt26ConfigDialogCmdLineOptions4pageEv
