@@ -6,7 +6,7 @@
 #
 Name     : liblxqt
 Version  : 0.15.1
-Release  : 5
+Release  : 6
 URL      : https://github.com/lxqt/liblxqt/releases/download/0.15.1/liblxqt-0.15.1.tar.xz
 Source0  : https://github.com/lxqt/liblxqt/releases/download/0.15.1/liblxqt-0.15.1.tar.xz
 Source1  : https://github.com/lxqt/liblxqt/releases/download/0.15.1/liblxqt-0.15.1.tar.xz.asc
@@ -21,7 +21,6 @@ BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : kwindowsystem-dev
 BuildRequires : libX11-dev libICE-dev libSM-dev libXau-dev libXcomposite-dev libXcursor-dev libXdamage-dev libXdmcp-dev libXext-dev libXfixes-dev libXft-dev libXi-dev libXinerama-dev libXi-dev libXmu-dev libXpm-dev libXrandr-dev libXrender-dev libXres-dev libXScrnSaver-dev libXt-dev libXtst-dev libXv-dev libXxf86misc-dev libXxf86vm-dev
-BuildRequires : liblxqt-data
 BuildRequires : libqtxdg-dev
 BuildRequires : lxqt-build-tools
 BuildRequires : polkit-dev
@@ -92,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1598900535
+export SOURCE_DATE_EPOCH=1598906426
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -105,7 +104,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1598900535
+export SOURCE_DATE_EPOCH=1598906426
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/liblxqt
 cp %{_builddir}/liblxqt-0.15.1/COPYING %{buildroot}/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
@@ -122,7 +121,6 @@ popd
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/cmake/*
 /usr/share/lxqt/power.conf
 /usr/share/lxqt/translations/liblxqt/liblxqt_ar.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_arn.qm
@@ -211,6 +209,10 @@ popd
 /usr/include/lxqt/LXQt/lxqttranslator.h
 /usr/lib64/liblxqt.so
 /usr/lib64/pkgconfig/lxqt.pc
+/usr/share/cmake/lxqt/lxqt-config-version.cmake
+/usr/share/cmake/lxqt/lxqt-config.cmake
+/usr/share/cmake/lxqt/lxqt-targets-relwithdebinfo.cmake
+/usr/share/cmake/lxqt/lxqt-targets.cmake
 
 %files lib
 %defattr(-,root,root,-)
