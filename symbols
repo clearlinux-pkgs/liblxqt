@@ -187,6 +187,7 @@ liblxqt.so.0:_ZN4LXQt26ConfigDialogCmdLineOptionsD2Ev
 liblxqt.so.0:_ZN4LXQt5Power10monitorOffEv
 liblxqt.so.0:_ZN4LXQt5Power11qt_metacallEN11QMetaObject4CallEiPPv
 liblxqt.so.0:_ZN4LXQt5Power11qt_metacastEPKc
+liblxqt.so.0:_ZN4LXQt5Power15showLeaveDialogEv
 liblxqt.so.0:_ZN4LXQt5Power6logoutEv
 liblxqt.so.0:_ZN4LXQt5Power6rebootEv
 liblxqt.so.0:_ZN4LXQt5Power7suspendEv
@@ -203,7 +204,7 @@ liblxqt.so.0:_ZN4LXQt5PowerD2Ev
 liblxqt.so.0:_ZN4LXQt8Settings11fileChangedEv
 liblxqt.so.0:_ZN4LXQt8Settings11qt_metacallEN11QMetaObject4CallEiPPv
 liblxqt.so.0:_ZN4LXQt8Settings11qt_metacastEPKc
-liblxqt.so.0:_ZN4LXQt8Settings12_fileChangedE7QString
+liblxqt.so.0:_ZN4LXQt8Settings12_fileChangedERK7QString
 liblxqt.so.0:_ZN4LXQt8Settings14addWatchedFileERK7QString
 liblxqt.so.0:_ZN4LXQt8Settings14globalSettingsEv
 liblxqt.so.0:_ZN4LXQt8Settings15settingsChangedEv
@@ -293,6 +294,7 @@ liblxqt.so.0:_ZNK4LXQt5Power10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt5Power11canShutdownEv
 liblxqt.so.0:_ZNK4LXQt5Power12canHibernateEv
 liblxqt.so.0:_ZNK4LXQt5Power13canMonitorOffEv
+liblxqt.so.0:_ZNK4LXQt5Power18canShowLeaveDialogEv
 liblxqt.so.0:_ZNK4LXQt5Power9canActionENS0_6ActionE
 liblxqt.so.0:_ZNK4LXQt5Power9canLogoutEv
 liblxqt.so.0:_ZNK4LXQt5Power9canRebootEv
