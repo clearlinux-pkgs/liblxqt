@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : liblxqt
-Version  : 0.16.0
-Release  : 8
-URL      : https://github.com/lxqt/liblxqt/releases/download/0.16.0/liblxqt-0.16.0.tar.xz
-Source0  : https://github.com/lxqt/liblxqt/releases/download/0.16.0/liblxqt-0.16.0.tar.xz
-Source1  : https://github.com/lxqt/liblxqt/releases/download/0.16.0/liblxqt-0.16.0.tar.xz.asc
+Version  : 0.17.0
+Release  : 9
+URL      : https://github.com/lxqt/liblxqt/releases/download/0.17.0/liblxqt-0.17.0.tar.xz
+Source0  : https://github.com/lxqt/liblxqt/releases/download/0.17.0/liblxqt-0.17.0.tar.xz
+Source1  : https://github.com/lxqt/liblxqt/releases/download/0.17.0/liblxqt-0.17.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -83,15 +83,15 @@ license components for the liblxqt package.
 
 
 %prep
-%setup -q -n liblxqt-0.16.0
-cd %{_builddir}/liblxqt-0.16.0
+%setup -q -n liblxqt-0.17.0
+cd %{_builddir}/liblxqt-0.17.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604538789
+export SOURCE_DATE_EPOCH=1618505886
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -104,10 +104,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1604538789
+export SOURCE_DATE_EPOCH=1618505886
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/liblxqt
-cp %{_builddir}/liblxqt-0.16.0/COPYING %{buildroot}/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/liblxqt-0.17.0/COPYING %{buildroot}/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -136,6 +136,7 @@ popd
 /usr/share/lxqt/translations/liblxqt/liblxqt_eo.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_es.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_es_VE.qm
+/usr/share/lxqt/translations/liblxqt/liblxqt_et.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_eu.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_fi.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_fr.qm
@@ -157,6 +158,7 @@ popd
 /usr/share/lxqt/translations/liblxqt/liblxqt_pt_BR.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_ro_RO.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_ru.qm
+/usr/share/lxqt/translations/liblxqt/liblxqt_si.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_sk_SK.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_sl.qm
 /usr/share/lxqt/translations/liblxqt/liblxqt_sr@latin.qm
@@ -218,7 +220,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/liblxqt.so.0
-/usr/lib64/liblxqt.so.0.16.0
+/usr/lib64/liblxqt.so.0.17.0
 
 %files license
 %defattr(0644,root,root,0755)

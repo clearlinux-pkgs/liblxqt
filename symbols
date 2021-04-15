@@ -150,6 +150,16 @@ liblxqt.so.0:_ZN4LXQt14AutostartEntryC1ERK7QString
 liblxqt.so.0:_ZN4LXQt14AutostartEntryC1Ev
 liblxqt.so.0:_ZN4LXQt14AutostartEntryC2ERK7QString
 liblxqt.so.0:_ZN4LXQt14AutostartEntryC2Ev
+liblxqt.so.0:_ZN4LXQt14GlobalSettings11fileChangedEv
+liblxqt.so.0:_ZN4LXQt14GlobalSettings11qt_metacallEN11QMetaObject4CallEiPPv
+liblxqt.so.0:_ZN4LXQt14GlobalSettings11qt_metacastEPKc
+liblxqt.so.0:_ZN4LXQt14GlobalSettings16iconThemeChangedEv
+liblxqt.so.0:_ZN4LXQt14GlobalSettings16lxqtThemeChangedEv
+liblxqt.so.0:_ZN4LXQt14GlobalSettingsC1Ev
+liblxqt.so.0:_ZN4LXQt14GlobalSettingsC2Ev
+liblxqt.so.0:_ZN4LXQt14GlobalSettingsD0Ev
+liblxqt.so.0:_ZN4LXQt14GlobalSettingsD1Ev
+liblxqt.so.0:_ZN4LXQt14GlobalSettingsD2Ev
 liblxqt.so.0:_ZN4LXQt14VirtualBackEnd11qt_metacallEN11QMetaObject4CallEiPPv
 liblxqt.so.0:_ZN4LXQt14VirtualBackEnd11qt_metacastEPKc
 liblxqt.so.0:_ZN4LXQt14VirtualBackEnd12getBacklightEv
@@ -272,7 +282,7 @@ liblxqt.so.0:_ZNK4LXQt12Notification10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt12PowerManager10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt13RotatedWidget10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt13RotatedWidget12adjustedSizeE5QSize
-liblxqt.so.0:_ZNK4LXQt13RotatedWidget13adjustedPointE6QPoint
+liblxqt.so.0:_ZNK4LXQt13RotatedWidget13adjustedPointE7QPointF
 liblxqt.so.0:_ZNK4LXQt13RotatedWidget15minimumSizeHintEv
 liblxqt.so.0:_ZNK4LXQt13RotatedWidget6originEv
 liblxqt.so.0:_ZNK4LXQt13RotatedWidget7contentEv
@@ -280,6 +290,7 @@ liblxqt.so.0:_ZNK4LXQt13RotatedWidget8sizeHintEv
 liblxqt.so.0:_ZNK4LXQt14AutostartEntry4fileEv
 liblxqt.so.0:_ZNK4LXQt14AutostartEntry4nameEv
 liblxqt.so.0:_ZNK4LXQt14AutostartEntry9isEnabledEv
+liblxqt.so.0:_ZNK4LXQt14GlobalSettings10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt14VirtualBackEnd10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt16PageSelectWidget10metaObjectEv
 liblxqt.so.0:_ZNK4LXQt16PageSelectWidget12maxTextWidthEv
