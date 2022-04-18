@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : liblxqt
-Version  : 1.0.0
-Release  : 10
-URL      : https://github.com/lxqt/liblxqt/releases/download/1.0.0/liblxqt-1.0.0.tar.xz
-Source0  : https://github.com/lxqt/liblxqt/releases/download/1.0.0/liblxqt-1.0.0.tar.xz
-Source1  : https://github.com/lxqt/liblxqt/releases/download/1.0.0/liblxqt-1.0.0.tar.xz.asc
+Version  : 1.1.0
+Release  : 11
+URL      : https://github.com/lxqt/liblxqt/releases/download/1.1.0/liblxqt-1.1.0.tar.xz
+Source0  : https://github.com/lxqt/liblxqt/releases/download/1.1.0/liblxqt-1.1.0.tar.xz
+Source1  : https://github.com/lxqt/liblxqt/releases/download/1.1.0/liblxqt-1.1.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -83,15 +83,15 @@ license components for the liblxqt package.
 
 
 %prep
-%setup -q -n liblxqt-1.0.0
-cd %{_builddir}/liblxqt-1.0.0
+%setup -q -n liblxqt-1.1.0
+cd %{_builddir}/liblxqt-1.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636132093
+export SOURCE_DATE_EPOCH=1650311118
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -104,10 +104,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1636132093
+export SOURCE_DATE_EPOCH=1650311118
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/liblxqt
-cp %{_builddir}/liblxqt-1.0.0/COPYING %{buildroot}/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/liblxqt-1.1.0/COPYING %{buildroot}/usr/share/package-licenses/liblxqt/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -220,7 +220,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/liblxqt.so.1
-/usr/lib64/liblxqt.so.1.0.0
+/usr/lib64/liblxqt.so.1.1.0
 
 %files license
 %defattr(0644,root,root,0755)
